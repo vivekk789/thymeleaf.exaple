@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>For Each</title>
+</head>
+<body>
+	<table border="2">
+		<thead>
+			<tr>
+				<th>Serial Number</th>
+				<th>Index</th>
+				<th>First</th>
+				<th>Last</th>
+				<th>Even</th>
+				<th>Odd</th>
+				<th>Id</th>
+				<th>Name</th>
+				<th>City</th>
+				<th>Email</th>
+			</tr>
+		</thead>
+			<tr th:each="student, userStat:${students}">
+				<td th:text="${userStat.count}"></td>
+				<td th:text="${userStat.index}"></td>
+				<td th:text="${userStat.first}"></td>
+				<td th:text="${userStat.last}"></td>
+				<td th:text="${userStat.even}"></td>
+				<td th:text="${userStat.odd}"></td>
+				<td th:text="${student.id}"></td>
+				<td th:text="${student.name}"></td>
+				<td th:text="${student.city}"></td>
+				<td th:text="${student.email}"></td>
+			</tr>
+	
+	</table>
+</body>
+</html>
